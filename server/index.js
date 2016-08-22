@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
+import path from 'path';
 import express from 'express';
 import pdf from 'html-pdf';
-import Root from '../client';
+import Page from '../client';
 
 const {
   PORT = 3000,
-  // PWD = __dirname
+  PWD = __dirname
 } = process.env;
 const app = express();
 
 app.get('/', (req, res) => {
-  const render = ReactDOMServer.renderToStaticMarkup(<Root />);
+  const render = ReactDOMServer.renderToStaticMarkup(<Page />);
 
   pdf.create(render, {}).toBuffer((error, buffer) => {
     if (error) {
@@ -25,6 +26,16 @@ app.get('/', (req, res) => {
       res.set('Content-Type', 'application/pdf');
       res.send(buffer);
     }
+  });
+});
+
+app.get('/build/:file', (req, res) => {
+  const {
+    file
+  } = req.params;
+
+  res.sendFile(file, {
+    root: path.resolve(PWD, 'build')
   });
 });
 

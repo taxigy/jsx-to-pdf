@@ -67,13 +67,10 @@ module.exports = [{
       test: /\.json$/,
       exclude: /node_modules/
     }, {
-      loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[local]__[hash:base64:5]!sass?sourceMap'),
+      loader: 'css-to-string!css!sass',
       test: /\.scss$/,
       exclude: /node_modules/
     }]
   },
-  plugins: [
-    new ExtractTextPlugin('styles.css')
-  ],
   externals
 }];
