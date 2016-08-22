@@ -7,7 +7,8 @@ import Page from '../client';
 
 const {
   PORT = 3000,
-  PWD = __dirname
+  PWD = __dirname,
+  DEBUG_IN_BROWSER_MODE
 } = process.env;
 const app = express();
 
@@ -15,7 +16,7 @@ app.get('/', (req, res) => {
   const render = ReactDOMServer.renderToStaticMarkup(<Page />);
 
   pdf.create(render, {}).toBuffer((error, buffer) => {
-    if (error) {
+    if (error || DEBUG_IN_BROWSER_MODE) {
       console.log(error);
 
       res.set('Content-Type', 'text/html');
