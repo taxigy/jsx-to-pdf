@@ -18,6 +18,9 @@
   "bugs": {
     "url": "https://github.com/taxigy/jsx-to-pdf-test/issues"
   },
+  "engines": {
+    "node": "6.3.1"
+  },
   "homepage": "https://github.com/taxigy/jsx-to-pdf-test#readme",
   "dependencies": {
     "babel-core": "^6.13.2",
