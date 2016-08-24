@@ -1,15 +1,30 @@
 import React, { Component } from 'react';
-import Root from './components/Root/Root';
+import Application from './components/Application/Application';
+import Applicants from './components/Applicants/Applicants';
+import Assets from './components/Assets/Assets';
+import Liabilities from './components/Liabilities/Liabilities';
 
 export default class Html extends Component {
   render() {
+    const {
+      applicationId,
+      item = {},
+      applicants,
+      assets,
+      liabilities
+    } = this.props;
+
     return (
       <html>
         <head>
           <link rel="stylesheet" href="/build/styles.css" />
         </head>
         <body>
-          <Root />
+          <Application title={item.name} />
+          <Applicants applicants={applicants} />
+          <Assets assets={assets} />
+          <Liabilities liabilites={liabilites} />
+          {applicationId}
         </body>
       </html>
     );

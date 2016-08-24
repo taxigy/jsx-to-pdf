@@ -1,0 +1,15 @@
+.application {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+
+  .caption {
+    width: auto;
+  }
+
+  .title {
+    width: auto;
+    font-size: 20px;
+  }
+}
