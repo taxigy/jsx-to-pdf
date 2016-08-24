@@ -16,9 +16,6 @@ export default class Html extends Component {
 
     return (
       <html>
-        <head>
-          <link rel="stylesheet" href="/build/styles.css" />
-        </head>
         <body>
           <Application title={item.name} />
           <Applicants applicants={applicants} />
