@@ -23,7 +23,7 @@ export default class Html extends Component {
           <Application title={item.name} />
           <Applicants applicants={applicants} />
           <Assets assets={assets} />
-          <Liabilities liabilites={liabilites} />
+          <Liabilities liabilites={liabilities} />
           {applicationId}
         </body>
       </html>
