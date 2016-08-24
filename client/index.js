@@ -7,11 +7,10 @@ import Liabilities from './components/Liabilities/Liabilities';
 export default class Html extends Component {
   render() {
     const {
-      applicationId,
       item = {},
-      applicants,
-      assets,
-      liabilities
+      applicants = [],
+      assets = [],
+      liabilities = []
     } = this.props;
 
     return (
@@ -21,7 +20,6 @@ export default class Html extends Component {
           <Applicants applicants={applicants} />
           <Assets assets={assets} />
           <Liabilities liabilites={liabilities} />
-          {applicationId}
         </body>
       </html>
     );
