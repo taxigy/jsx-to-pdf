@@ -16,6 +16,9 @@ export default class Html extends Component {
 
     return (
       <html>
+        <head>
+          <style>{styles}</style>
+        </head>
         <body className="index">
           <Application title={item.name} />
           <Applicants applicants={applicants} />

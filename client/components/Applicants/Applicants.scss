@@ -2,19 +2,39 @@
   display: block;
 
   .title {
-    margin: 0 10px;
+    margin: 10px 0;
     font-family: Helvetica, sans-serif;
     font-size: 20px;
     font-weight: 300;
   }
 
   .applicant {
-    .caption {
+    .title {
+      margin: 10px 0;
+      font-family: Helvetica, sans-serif;
       font-size: 16px;
+      font-weight: 700;
+      color: rgba(black, 0.725);
     }
 
     .table {
-      border: 1px solid rgba(black, 0.375);
+      tr {
+        &:nth-child(2n) {
+          background-color: rgba(black, 0.125);
+        }
+
+        &:nth-child(2n+1) {
+          background-color: rgba(white, 0.125);
+        }
+      }
+
+      td {
+        padding: 2px 4px;
+      }
     }
+  }
+
+  .hidden {
+    display: none;
   }
 }

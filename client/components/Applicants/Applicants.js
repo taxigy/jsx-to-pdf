@@ -14,7 +14,7 @@ export default class Applicants extends Component {
           <div
             key={index}
             className="applicant">
-            <div className="caption">Personal Details</div>
+            <div className="title">Personal Details</div>
             <table className="table">
               <tbody>
                 <tr>
@@ -75,7 +75,7 @@ export default class Applicants extends Component {
                 </tr>
               </tbody>
             </table>
-            <div className="caption">Address Details</div>
+            <div className="title">Address Details</div>
             <table className="table">
               <tbody>
                 <tr>
@@ -104,7 +104,7 @@ export default class Applicants extends Component {
                 </tr>
               </tbody>
             </table>
-            <div className="caption">Income Details</div>
+            <div className="title">Income Details</div>
             <table className="table">
               <tbody>
                 <tr>
@@ -229,7 +229,7 @@ export default class Applicants extends Component {
                 </tr>
               </tbody>
             </table>
-            <div className="caption">Additional Comments</div>
+            <div className={applicant.additional_comments ? 'title' : 'hidden'}>Additional Comments</div>
             <div className="text">{applicant.additional_comments}</div>
           </div>
         ))}
