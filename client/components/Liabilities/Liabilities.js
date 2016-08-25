@@ -9,6 +9,7 @@ export default class Liabilities extends Component {
 
     return (
       <div className="liabilities">
+        <div className="title">Liabilities</div>
         todo
         <style>{styles}</style>
       </div>

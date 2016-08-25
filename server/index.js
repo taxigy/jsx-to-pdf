@@ -30,6 +30,8 @@ app.post('/', bodyParser.json(), (req, res) => {
     <Html {...req.body} />
   );
 
+  console.log(req.body);
+
   pdf.create(render, {}).toBuffer((error, buffer) => {
     console.log('PDF generated.');
     res.set('Content-Type', 'application/pdf');

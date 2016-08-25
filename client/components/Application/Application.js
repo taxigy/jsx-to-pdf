@@ -9,7 +9,6 @@ export default class Application extends Component {
 
     return (
       <div className="application">
-        <div className="caption">Application</div>
         <div className="title">{title}</div>
         <style>{styles}</style>
       </div>

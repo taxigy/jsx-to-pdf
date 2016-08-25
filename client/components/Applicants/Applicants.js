@@ -9,7 +9,7 @@ export default class Applicants extends Component {
 
     return (
       <div className="applicants">
-        <div className="caption">Applicants</div>
+        <div className="title">Applicants</div>
         {applicants.map((applicant, index) => (
           <div
             key={index}

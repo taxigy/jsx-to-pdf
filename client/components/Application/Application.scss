@@ -1,15 +1,10 @@
 .application {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: baseline;
-
-  .caption {
-    width: auto;
-  }
+  display: block;
 
   .title {
-    width: auto;
+    margin: 0 10px;
+    font-family: Helvetica, sans-serif;
     font-size: 20px;
+    font-weight: 300;
   }
 }
