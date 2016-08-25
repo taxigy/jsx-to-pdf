@@ -7,4 +7,24 @@
     font-size: 20px;
     font-weight: 300;
   }
+
+  .table {
+    tr {
+      &:nth-child(2n) {
+        background-color: rgba(black, 0.125);
+      }
+
+      &:nth-child(2n+1) {
+        background-color: rgba(white, 0.125);
+      }
+    }
+
+    th {
+      font-size: 18px;
+    }
+
+    td {
+      padding: 2px 4px;
+    }
+  }
 }
