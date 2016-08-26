@@ -13,11 +13,11 @@ export default class Liabilities extends Component {
         <table className="table">
           <thead>
             <tr>
-              <td>Type</td>
-              <td>Lender</td>
-              <td>Limit</td>
-              <td>Balance</td>
-              <td>Monthly Payment</td>
+              <th>Type</th>
+              <th>Lender</th>
+              <th>Limit</th>
+              <th>Balance</th>
+              <th>Monthly Payment</th>
             </tr>
           </thead>
           <tbody>
