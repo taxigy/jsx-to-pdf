@@ -29,10 +29,15 @@ app.post('/', bodyParser.json(), (req, res) => {
   const render = ReactDOMServer.renderToStaticMarkup(
     <Html {...req.body} />
   );
+  const options = {
+    format: 'Letter',
+    orientation: 'portrait',
+    border: '0.45in'
+  };
 
-  console.log(req.body);
+  console.log(JSON.stringify(req.body));
 
-  pdf.create(render, {}).toBuffer((error, buffer) => {
+  pdf.create(render, options).toBuffer((error, buffer) => {
     console.log('PDF generated.');
     res.set('Content-Type', 'application/pdf');
     res.send(buffer);

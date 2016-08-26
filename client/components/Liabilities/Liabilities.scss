@@ -9,6 +9,8 @@
   }
 
   .table {
+    width: 100%;
+
     tr {
       &:nth-child(2n) {
         background-color: rgba(black, 0.125);
@@ -19,13 +21,15 @@
       }
     }
 
-    th {
-      font-size: 18px;
-    }
-
     td {
       padding: 2px 4px;
+      font-size: 14px;
+    }
+
+    th {
+      padding: 2px 10px 2px 4px;
+      font-size: 14px;
+      text-align: left;
     }
   }
-
 }

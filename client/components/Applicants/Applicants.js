@@ -18,60 +18,60 @@ export default class Applicants extends Component {
             <table className="table">
               <tbody>
                 <tr>
-                  <td className="table-cell-caption">Title</td>
-                  <td className="table-cell-value">{applicant.title}</td>
+                  <th>Title</th>
+                  <td>{applicant.title}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">First Name</td>
-                  <td className="table-cell-value">{applicant.first_name}</td>
+                  <th>First Name</th>
+                  <td>{applicant.first_name}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Middle Name</td>
-                  <td className="table-cell-value">{applicant.middle_name}</td>
+                  <th>Middle Name</th>
+                  <td>{applicant.middle_name}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Surname</td>
-                  <td className="table-cell-value">{applicant.surname}</td>
+                  <th>Surname</th>
+                  <td>{applicant.surname}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Date of Birth</td>
-                  <td className="table-cell-value">{applicant.date_of_birth}</td>
+                  <th>Date of Birth</th>
+                  <td>{applicant.date_of_birth}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Mother's Maiden Name</td>
-                  <td className="table-cell-value">{applicant.mother_maiden_name}</td>
+                  <th>Mother's Maiden Name</th>
+                  <td>{applicant.mother_maiden_name}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Marital Status</td>
-                  <td className="table-cell-value">{applicant.marital_status}</td>
+                  <th>Marital Status</th>
+                  <td>{applicant.marital_status}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Ages of Dependants</td>
-                  <td className="table-cell-value">{applicant.ages_of_dependants}</td>
+                  <th>Ages of Dependants</th>
+                  <td>{applicant.ages_of_dependants}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Phone No. (h/w/m)</td>
-                  <td className="table-cell-value">{applicant.phone_no}</td>
+                  <th>Phone No. (h/w/m)</th>
+                  <td>{applicant.phone_no}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Email Address</td>
-                  <td className="table-cell-value">{applicant.email_address}</td>
+                  <th>Email Address</th>
+                  <td>{applicant.email_address}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Other ID</td>
-                  <td className="table-cell-value">{applicant.other_id}</td>
+                  <th>Other ID</th>
+                  <td>{applicant.other_id}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">First Home Owner</td>
-                  <td className="table-cell-value">{applicant.first_home_owner}</td>
+                  <th>First Home Owner</th>
+                  <td>{applicant.first_home_owner}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Aust Perm Resident?</td>
-                  <td className="table-cell-value">{applicant.aust_perm_resident}</td>
+                  <th>Aust Perm Resident?</th>
+                  <td>{applicant.aust_perm_resident}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Dependant Spouse</td>
-                  <td className="table-cell-value">{applicant.dependant_spouse}</td>
+                  <th>Dependant Spouse</th>
+                  <td>{applicant.dependant_spouse}</td>
                 </tr>
               </tbody>
             </table>
@@ -79,28 +79,28 @@ export default class Applicants extends Component {
             <table className="table">
               <tbody>
                 <tr>
-                  <td className="table-cell-caption">Current Address</td>
-                  <td className="table-cell-value">{applicant.current_address}</td>
+                  <th>Current Address</th>
+                  <td>{applicant.current_address}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Date Moved In</td>
-                  <td className="table-cell-value">{applicant.date_moved_in}</td>
+                  <th>Date Moved In</th>
+                  <td>{applicant.date_moved_in}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Residental Status</td>
-                  <td className="table-cell-value">{applicant.residental_status}</td>
+                  <th>Residental Status</th>
+                  <td>{applicant.residental_status}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Postal Address (if different)</td>
-                  <td className="table-cell-value">{applicant.postal_address}</td>
+                  <th>Postal Address (if different)</th>
+                  <td>{applicant.postal_address}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Previous Address</td>
-                  <td className="table-cell-value">{applicant.previous_address}</td>
+                  <th>Previous Address</th>
+                  <td>{applicant.previous_address}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Date / Prev. Add.</td>
-                  <td className="table-cell-value">{applicant.date_moved_in_pr_add}</td>
+                  <th>Date / Prev. Add.</th>
+                  <td>{applicant.date_moved_in_pr_add}</td>
                 </tr>
               </tbody>
             </table>
@@ -108,124 +108,124 @@ export default class Applicants extends Component {
             <table className="table">
               <tbody>
                 <tr>
-                  <td className="table-cell-caption">Current Employer's Name</td>
-                  <td className="table-cell-value">{applicant.current_employes_name}</td>
+                  <th>Current Employer's Name</th>
+                  <td>{applicant.current_employes_name}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Start Date</td>
-                  <td className="table-cell-value">{applicant.start_date}</td>
+                  <th>Start Date</th>
+                  <td>{applicant.start_date}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Status</td>
-                  <td className="table-cell-value">{applicant.status}</td>
+                  <th>Status</th>
+                  <td>{applicant.status}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Job Title</td>
-                  <td className="table-cell-value">{applicant.job_title}</td>
+                  <th>Job Title</th>
+                  <td>{applicant.job_title}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Gross Annual Salary</td>
-                  <td className="table-cell-value">{applicant.gross_annual_salary}</td>
+                  <th>Gross Annual Salary</th>
+                  <td>{applicant.gross_annual_salary}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Commission</td>
-                  <td className="table-cell-value">{applicant.commission}</td>
+                  <th>Commission</th>
+                  <td>{applicant.commission}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Employer Address</td>
-                  <td className="table-cell-value">{applicant.employer_address}</td>
+                  <th>Employer Address</th>
+                  <td>{applicant.employer_address}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Name and Number</td>
-                  <td className="table-cell-value">{applicant.contact_details}</td>
+                  <th>Name and Number</th>
+                  <td>{applicant.contact_details}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Rental Income</td>
-                  <td className="table-cell-value">{applicant.rental_income}</td>
+                  <th>Rental Income</th>
+                  <td>{applicant.rental_income}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Family Tax A/B</td>
-                  <td className="table-cell-value">{applicant.family_tax}</td>
+                  <th>Family Tax A/B</th>
+                  <td>{applicant.family_tax}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Other Income</td>
-                  <td className="table-cell-value">{applicant.other_income}</td>
+                  <th>Other Income</th>
+                  <td>{applicant.other_income}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Better Rate</td>
-                  <td className="table-cell-value">{applicant.better_rate}</td>
+                  <th>Better Rate</th>
+                  <td>{applicant.better_rate}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">End of Fixed Rate</td>
-                  <td className="table-cell-value">{applicant.end_of_fixed_rate}</td>
+                  <th>End of Fixed Rate</th>
+                  <td>{applicant.end_of_fixed_rate}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Debt Consolidation</td>
-                  <td className="table-cell-value">{applicant.debt_consolidation}</td>
+                  <th>Debt Consolidation</th>
+                  <td>{applicant.debt_consolidation}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Additional Funds</td>
-                  <td className="table-cell-value">{applicant.additional_funds}</td>
+                  <th>Additional Funds</th>
+                  <td>{applicant.additional_funds}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Construction</td>
-                  <td className="table-cell-value">{applicant.construction}</td>
+                  <th>Construction</th>
+                  <td>{applicant.construction}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Lock in Equity</td>
-                  <td className="table-cell-value">{applicant.lock_in_equity}</td>
+                  <th>Lock in Equity</th>
+                  <td>{applicant.lock_in_equity}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Dislikes Lender</td>
-                  <td className="table-cell-value">{applicant.dislikes_lender}</td>
+                  <th>Dislikes Lender</th>
+                  <td>{applicant.dislikes_lender}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Change Structure</td>
-                  <td className="table-cell-value">{applicant.change_structure}</td>
+                  <th>Change Structure</th>
+                  <td>{applicant.change_structure}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Income Rate</td>
-                  <td className="table-cell-value">{applicant.income_rate}</td>
+                  <th>Income Rate</th>
+                  <td>{applicant.income_rate}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Income Speed</td>
-                  <td className="table-cell-value">{applicant.income_speed}</td>
+                  <th>Income Speed</th>
+                  <td>{applicant.income_speed}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Valuation</td>
-                  <td className="table-cell-value">{applicant.valuation}</td>
+                  <th>Valuation</th>
+                  <td>{applicant.valuation}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Property Type</td>
-                  <td className="table-cell-value">{applicant.property_type}</td>
+                  <th>Property Type</th>
+                  <td>{applicant.property_type}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Construction Purchase</td>
-                  <td className="table-cell-value">{applicant.construction_purchase}</td>
+                  <th>Construction Purchase</th>
+                  <td>{applicant.construction_purchase}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Preapproval</td>
-                  <td className="table-cell-value">{applicant.preapproval}</td>
+                  <th>Preapproval</th>
+                  <td>{applicant.preapproval}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Income Increase</td>
-                  <td className="table-cell-value">{applicant.income_increase}</td>
+                  <th>Income Increase</th>
+                  <td>{applicant.income_increase}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Extra Earner</td>
-                  <td className="table-cell-value">{applicant.extra_earner}</td>
+                  <th>Extra Earner</th>
+                  <td>{applicant.extra_earner}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Add Inc Source</td>
-                  <td className="table-cell-value">{applicant.add_inc_source}</td>
+                  <th>Add Inc Source</th>
+                  <td>{applicant.add_inc_source}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">Income Reduce</td>
-                  <td className="table-cell-value">{applicant.income_reduce}</td>
+                  <th>Income Reduce</th>
+                  <td>{applicant.income_reduce}</td>
                 </tr>
                 <tr>
-                  <td className="table-cell-caption">School Fees</td>
-                  <td className="table-cell-value">{applicant.school_fees}</td>
+                  <th>School Fees</th>
+                  <td>{applicant.school_fees}</td>
                 </tr>
               </tbody>
             </table>
