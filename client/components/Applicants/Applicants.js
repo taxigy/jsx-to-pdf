@@ -63,15 +63,15 @@ export default class Applicants extends Component {
                 </tr>
                 <tr>
                   <th>First Home Owner</th>
-                  <td>{applicant.first_home_owner}</td>
+                  <td>{applicant.first_home_owner ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Aust Perm Resident?</th>
-                  <td>{applicant.aust_perm_resident}</td>
+                  <td>{applicant.aust_perm_resident ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Dependant Spouse</th>
-                  <td>{applicant.dependant_spouse}</td>
+                  <td>{applicant.dependant_spouse ? 'Yes' : 'No'}</td>
                 </tr>
               </tbody>
             </table>
@@ -153,79 +153,79 @@ export default class Applicants extends Component {
                 </tr>
                 <tr>
                   <th>Better Rate</th>
-                  <td>{applicant.better_rate}</td>
+                  <td>{applicant.better_rate ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>End of Fixed Rate</th>
-                  <td>{applicant.end_of_fixed_rate}</td>
+                  <td>{applicant.end_of_fixed_rate ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Debt Consolidation</th>
-                  <td>{applicant.debt_consolidation}</td>
+                  <td>{applicant.debt_consolidation ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Additional Funds</th>
-                  <td>{applicant.additional_funds}</td>
+                  <td>{applicant.additional_funds ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Construction</th>
-                  <td>{applicant.construction}</td>
+                  <td>{applicant.construction ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Lock in Equity</th>
-                  <td>{applicant.lock_in_equity}</td>
+                  <td>{applicant.lock_in_equity ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Dislikes Lender</th>
-                  <td>{applicant.dislikes_lender}</td>
+                  <td>{applicant.dislikes_lender ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Change Structure</th>
-                  <td>{applicant.change_structure}</td>
+                  <td>{applicant.change_structure ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Income Rate</th>
-                  <td>{applicant.income_rate}</td>
+                  <td>{applicant.income_rate ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Income Speed</th>
-                  <td>{applicant.income_speed}</td>
+                  <td>{applicant.income_speed ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Valuation</th>
-                  <td>{applicant.valuation}</td>
+                  <td>{applicant.valuation ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Property Type</th>
-                  <td>{applicant.property_type}</td>
+                  <td>{applicant.property_type ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Construction Purchase</th>
-                  <td>{applicant.construction_purchase}</td>
+                  <td>{applicant.construction_purchase ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Preapproval</th>
-                  <td>{applicant.preapproval}</td>
+                  <td>{applicant.preapproval ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Income Increase</th>
-                  <td>{applicant.income_increase}</td>
+                  <td>{applicant.income_increase ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Extra Earner</th>
-                  <td>{applicant.extra_earner}</td>
+                  <td>{applicant.extra_earner ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Add Inc Source</th>
-                  <td>{applicant.add_inc_source}</td>
+                  <td>{applicant.add_inc_source ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Income Reduce</th>
-                  <td>{applicant.income_reduce}</td>
+                  <td>{applicant.income_reduce ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>School Fees</th>
-                  <td>{applicant.school_fees}</td>
+                  <td>{applicant.school_fees ? 'Yes' : 'No'}</td>
                 </tr>
               </tbody>
             </table>
