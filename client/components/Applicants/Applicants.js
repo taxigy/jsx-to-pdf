@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import styles from './Applicants.scss';
+
+const {
+  DATE_FORMAT = 'MMMM DD, YYYY'
+} = process.env;
 
 export default class Applicants extends Component {
   render() {
@@ -35,7 +40,7 @@ export default class Applicants extends Component {
                 </tr>
                 <tr>
                   <th>Date of Birth</th>
-                  <td>{applicant.date_of_birth}</td>
+                  <td>{moment(applicant.date_of_birth).format(DATE_FORMAT)}</td>
                 </tr>
                 <tr>
                   <th>Mother's Maiden Name</th>
@@ -84,7 +89,7 @@ export default class Applicants extends Component {
                 </tr>
                 <tr>
                   <th>Date Moved In</th>
-                  <td>{applicant.date_moved_in}</td>
+                  <td>{moment(applicant.date_moved_in).format(DATE_FORMAT)}</td>
                 </tr>
                 <tr>
                   <th>Residental Status</th>
@@ -100,7 +105,7 @@ export default class Applicants extends Component {
                 </tr>
                 <tr>
                   <th>Date / Prev. Add.</th>
-                  <td>{applicant.date_moved_in_pr_add}</td>
+                  <td>{moment(applicant.date_moved_in_pr_add).format(DATE_FORMAT)}</td>
                 </tr>
               </tbody>
             </table>
@@ -113,7 +118,7 @@ export default class Applicants extends Component {
                 </tr>
                 <tr>
                   <th>Start Date</th>
-                  <td>{applicant.start_date}</td>
+                  <td>{moment(applicant.start_date).format(DATE_FORMAT)}</td>
                 </tr>
                 <tr>
                   <th>Status</th>
