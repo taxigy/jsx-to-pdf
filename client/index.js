@@ -20,8 +20,9 @@ export default class Html extends Component {
           <style>{styles}</style>
         </head>
         <body className="index">
-          <Application title={item.name} />
+          <div className="title">{item.name}</div>
           <Applicants applicants={applicants} />
+          <Application application={item} />
           <Assets assets={assets} />
           <Liabilities liabilities={liabilities} />
         </body>

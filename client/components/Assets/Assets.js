@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styles from './Assets.scss';
 
 export default class Assets extends Component {
   render() {
@@ -9,7 +8,7 @@ export default class Assets extends Component {
 
     return (
       <div className="assets">
-        <div className="title">Assets</div>
+        <div className="section-title">Assets</div>
         <table className="table">
           <thead>
             <tr>
@@ -31,7 +30,6 @@ export default class Assets extends Component {
             ))}
           </tbody>
         </table>
-        <style>{styles}</style>
       </div>
     );
   }
