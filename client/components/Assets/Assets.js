@@ -22,8 +22,8 @@ export default class Assets extends Component {
             {assets.map((asset, key) => (
               <tr
                 key={key}>
-                <td>{asset.assetType}</td>
-                <td>{asset.assetAddress}</td>
+                <td>{asset.type}</td>
+                <td>{asset.address}</td>
                 <td>{asset.estimatedValue}</td>
                 <td>todo</td>
               </tr>

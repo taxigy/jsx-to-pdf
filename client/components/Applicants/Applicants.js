@@ -63,9 +63,19 @@ export default class Applicants extends Component {
                   <td>{right.ages_of_dependants}</td>
                 </tr>
                 <tr>
-                  <th>Phone No. (h/w/m)</th>
-                  <td>{left.phone_no}</td>
-                  <td>{right.phone_no}</td>
+                  <th>Home Phone Number</th>
+                  <td>{left.phone_home}</td>
+                  <td>{right.phone_home}</td>
+                </tr>
+                <tr>
+                  <th>Work Phone Number</th>
+                  <td>{left.phone_work}</td>
+                  <td>{right.phone_work}</td>
+                </tr>
+                <tr>
+                  <th>Mobile Phone Number</th>
+                  <td>{left.phone_mobile}</td>
+                  <td>{right.phone_mobile}</td>
                 </tr>
                 <tr>
                   <th>Email Address</th>
@@ -83,9 +93,9 @@ export default class Applicants extends Component {
                   <td>{right.first_home_owner ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
-                  <th>Aust Perm Resident?</th>
-                  <td>{left.aust_perm_resident ? 'Yes' : 'No'}</td>
-                  <td>{right.aust_perm_resident ? 'Yes' : 'No'}</td>
+                  <th>Permanent Resident in Australia</th>
+                  <td>{left.permanent_resident ? 'Yes' : 'No'}</td>
+                  <td>{right.permanent_resident ? 'Yes' : 'No'}</td>
                 </tr>
                 <tr>
                   <th>Dependant Spouse</th>
@@ -103,14 +113,14 @@ export default class Applicants extends Component {
                   <td>{right.current_address}</td>
                 </tr>
                 <tr>
-                  <th>Date Moved In</th>
-                  <td>{moment(left.date_moved_in).format(DATE_FORMAT)}</td>
-                  <td>{moment(right.date_moved_in).format(DATE_FORMAT)}</td>
+                  <th>Date Moved into Current Address</th>
+                  <td>{moment(left.date_moved_into_current_address).format(DATE_FORMAT)}</td>
+                  <td>{moment(right.date_moved_into_current_address).format(DATE_FORMAT)}</td>
                 </tr>
                 <tr>
-                  <th>Residental Status</th>
-                  <td>{left.residental_status}</td>
-                  <td>{right.residental_status}</td>
+                  <th>Residential Status</th>
+                  <td>{left.residential_status}</td>
+                  <td>{right.residential_status}</td>
                 </tr>
                 <tr>
                   <th>Postal Address (if different)</th>
@@ -123,9 +133,9 @@ export default class Applicants extends Component {
                   <td>{right.previous_address}</td>
                 </tr>
                 <tr>
-                  <th>Date / Prev. Add.</th>
-                  <td>{moment(left.date_moved_in_pr_add).format(DATE_FORMAT)}</td>
-                  <td>{moment(right.date_moved_in_pr_add).format(DATE_FORMAT)}</td>
+                  <th>Date Moved into Previous Address</th>
+                  <td>{moment(left.date_moved_into_previous_address).format(DATE_FORMAT)}</td>
+                  <td>{moment(right.date_moved_into_previous_address).format(DATE_FORMAT)}</td>
                 </tr>
               </tbody>
             </table>
@@ -134,43 +144,43 @@ export default class Applicants extends Component {
               <tbody>
                 <tr>
                   <th>Current Employer's Name</th>
-                  <td>{left.current_employes_name}</td>
-                  <td>{right.current_employes_name}</td>
+                  <td>{left.current_employer}</td>
+                  <td>{right.current_employer}</td>
                 </tr>
                 <tr>
                   <th>Start Date</th>
-                  <td>{moment(left.start_date).format(DATE_FORMAT)}</td>
-                  <td>{moment(right.start_date).format(DATE_FORMAT)}</td>
+                  <td>{moment(left.current_employer_start_date).format(DATE_FORMAT)}</td>
+                  <td>{moment(right.current_employer_start_date).format(DATE_FORMAT)}</td>
                 </tr>
                 <tr>
                   <th>Status</th>
-                  <td>{left.status}</td>
-                  <td>{right.status}</td>
+                  <td>{left.current_employer_status}</td>
+                  <td>{right.current_employer_status}</td>
                 </tr>
                 <tr>
                   <th>Job Title</th>
-                  <td>{left.job_title}</td>
-                  <td>{right.job_title}</td>
+                  <td>{left.current_employer_job_title}</td>
+                  <td>{right.current_employer_job_title}</td>
                 </tr>
                 <tr>
                   <th>Gross Annual Salary</th>
-                  <td>{left.gross_annual_salary}</td>
-                  <td>{right.gross_annual_salary}</td>
+                  <td>{left.current_employer_gross_annual_salary}</td>
+                  <td>{right.current_employer_gross_annual_salary}</td>
                 </tr>
                 <tr>
                   <th>Commission</th>
-                  <td>{left.commission}</td>
-                  <td>{right.commission}</td>
+                  <td>{left.current_employer_commission}</td>
+                  <td>{right.current_employer_commission}</td>
                 </tr>
                 <tr>
-                  <th>Employer Address</th>
-                  <td>{left.employer_address}</td>
-                  <td>{right.employer_address}</td>
+                  <th>Employer's Address</th>
+                  <td>{left.current_employer_address}</td>
+                  <td>{right.current_employer_address}</td>
                 </tr>
                 <tr>
-                  <th>Name and Number</th>
-                  <td>{left.contact_details}</td>
-                  <td>{right.contact_details}</td>
+                  <th>Employer's Contact Details</th>
+                  <td>{left.current_employer_contact_details}</td>
+                  <td>{right.current_employer_contact_details}</td>
                 </tr>
                 <tr>
                   <th>Rental Income</th>
@@ -236,8 +246,16 @@ export default class Applicants extends Component {
                     <td>{applicant.ages_of_dependants}</td>
                   </tr>
                   <tr>
-                    <th>Phone No. (h/w/m)</th>
-                    <td>{applicant.phone_no}</td>
+                    <th>Home Phone Number</th>
+                    <td>{applicant.phone_home}</td>
+                  </tr>
+                  <tr>
+                    <th>Work Phone Number</th>
+                    <td>{applicant.phone_work}</td>
+                  </tr>
+                  <tr>
+                    <th>Mobile Phone Number</th>
+                    <td>{applicant.phone_mobile}</td>
                   </tr>
                   <tr>
                     <th>Email Address</th>
@@ -252,8 +270,8 @@ export default class Applicants extends Component {
                     <td>{applicant.first_home_owner ? 'Yes' : 'No'}</td>
                   </tr>
                   <tr>
-                    <th>Aust Perm Resident?</th>
-                    <td>{applicant.aust_perm_resident ? 'Yes' : 'No'}</td>
+                    <th>Permanent Resident in Australia</th>
+                    <td>{applicant.permanent_resident ? 'Yes' : 'No'}</td>
                   </tr>
                   <tr>
                     <th>Dependant Spouse</th>
@@ -269,12 +287,12 @@ export default class Applicants extends Component {
                     <td>{applicant.current_address}</td>
                   </tr>
                   <tr>
-                    <th>Date Moved In</th>
-                    <td>{moment(applicant.date_moved_in).format(DATE_FORMAT)}</td>
+                    <th>Date Moved into Current Address</th>
+                    <td>{moment(applicant.date_moved_into_current_address).format(DATE_FORMAT)}</td>
                   </tr>
                   <tr>
-                    <th>Residental Status</th>
-                    <td>{applicant.residental_status}</td>
+                    <th>Residential Status</th>
+                    <td>{applicant.residential_status}</td>
                   </tr>
                   <tr>
                     <th>Postal Address (if different)</th>
@@ -285,8 +303,8 @@ export default class Applicants extends Component {
                     <td>{applicant.previous_address}</td>
                   </tr>
                   <tr>
-                    <th>Date / Prev. Add.</th>
-                    <td>{moment(applicant.date_moved_in_pr_add).format(DATE_FORMAT)}</td>
+                    <th>Date Moved into Previous Address</th>
+                    <td>{moment(applicant.date_moved_into_previous_address).format(DATE_FORMAT)}</td>
                   </tr>
                 </tbody>
               </table>
@@ -295,35 +313,35 @@ export default class Applicants extends Component {
                 <tbody>
                   <tr>
                     <th>Current Employer's Name</th>
-                    <td>{applicant.current_employes_name}</td>
+                    <td>{applicant.current_employer}</td>
                   </tr>
                   <tr>
                     <th>Start Date</th>
-                    <td>{moment(applicant.start_date).format(DATE_FORMAT)}</td>
+                    <td>{moment(applicant.current_employer_start_date).format(DATE_FORMAT)}</td>
                   </tr>
                   <tr>
                     <th>Status</th>
-                    <td>{applicant.status}</td>
+                    <td>{applicant.current_employer_status}</td>
                   </tr>
                   <tr>
                     <th>Job Title</th>
-                    <td>{applicant.job_title}</td>
+                    <td>{applicant.current_employer_job_title}</td>
                   </tr>
                   <tr>
                     <th>Gross Annual Salary</th>
-                    <td>{applicant.gross_annual_salary}</td>
+                    <td>{applicant.current_employer_gross_annual_salary}</td>
                   </tr>
                   <tr>
                     <th>Commission</th>
-                    <td>{applicant.commission}</td>
+                    <td>{applicant.current_employer_commission}</td>
                   </tr>
                   <tr>
-                    <th>Employer Address</th>
-                    <td>{applicant.employer_address}</td>
+                    <th>Employer's Address</th>
+                    <td>{applicant.current_employer_address}</td>
                   </tr>
                   <tr>
-                    <th>Name and Number</th>
-                    <td>{applicant.contact_details}</td>
+                    <th>Employer's Contact Details</th>
+                    <td>{applicant.current_employer_contact_details}</td>
                   </tr>
                   <tr>
                     <th>Rental Income</th>
