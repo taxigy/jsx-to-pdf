@@ -132,16 +132,16 @@ export default class Applicants extends Component {
             <div className="table-title">Previous Addresses</div>
             <table className="table">
               <tbody>
-                {new Array(Math.max(left.previous_addresses.length, right.previous_addresses.length)).map((x, index) => [(
+                {new Array(Math.max(left.previous_addresses instanceof Array && left.previous_addresses.length, right.previous_addresses instanceof Array && right.previous_addresses.length)).fill().map((x, index) => [(
                   <tr key={`${index}-address`}>
                     <th>Previous Address</th>
                     <td>{left.previous_addresses && left.previous_addresses[0] && left.previous_addresses[0].address}</td>
-                    <td>{right.previous_addresses && right.previous_addresses[0] && moment(right.previous_addresses[0].address).format(DATE_FORMAT)}</td>
+                    <td>{right.previous_addresses && right.previous_addresses[0] && right.previous_addresses[0].address}</td>
                   </tr>
                 ), (
                   <tr key={`${index}-date_moved`}>
                     <th>Date Moved into Previous Address</th>
-                    <td>{left.previous_addresses && left.previous_addresses[0] && left.previous_addresses[0].date_moved_into_address}</td>
+                    <td>{left.previous_addresses && left.previous_addresses[0] && moment(left.previous_addresses[0].date_moved_into_address).format(DATE_FORMAT)}</td>
                     <td>{right.previous_addresses && right.previous_addresses[0] && moment(right.previous_addresses[0].date_moved_into_address).format(DATE_FORMAT)}</td>
                   </tr>
                 )])}
