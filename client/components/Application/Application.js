@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 
 const labels = {
   objective_better_rate: 'Better Rate',

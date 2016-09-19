@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import moment from 'moment';
 
 const {
@@ -135,66 +137,82 @@ export default class Applicants extends Component {
                 {new Array(Math.max(left.previous_addresses instanceof Array && left.previous_addresses.length, right.previous_addresses instanceof Array && right.previous_addresses.length)).fill().map((x, index) => [(
                   <tr key={`${index}-address`}>
                     <th>Previous Address</th>
-                    <td>{left.previous_addresses && left.previous_addresses[0] && left.previous_addresses[0].address}</td>
-                    <td>{right.previous_addresses && right.previous_addresses[0] && right.previous_addresses[0].address}</td>
+                    <td>{left.previous_addresses && left.previous_addresses[index] && left.previous_addresses[index].address}</td>
+                    <td>{right.previous_addresses && right.previous_addresses[index] && right.previous_addresses[index].address}</td>
                   </tr>
                 ), (
                   <tr key={`${index}-date_moved`}>
                     <th>Date Moved into Previous Address</th>
-                    <td>{left.previous_addresses && left.previous_addresses[0] && moment(left.previous_addresses[0].date_moved_into_address).format(DATE_FORMAT)}</td>
-                    <td>{right.previous_addresses && right.previous_addresses[0] && moment(right.previous_addresses[0].date_moved_into_address).format(DATE_FORMAT)}</td>
+                    <td>{left.previous_addresses && left.previous_addresses[index] && moment(left.previous_addresses[index].date_moved_into_address).format(DATE_FORMAT)}</td>
+                    <td>{right.previous_addresses && right.previous_addresses[index] && moment(right.previous_addresses[index].date_moved_into_address).format(DATE_FORMAT)}</td>
                   </tr>
                 )])}
               </tbody>
             </table>
-            <div className="table-title">Income Details</div>
+            <div className="table-title">Employment History</div>
             <table className="table">
               <tbody>
-                <tr>
-                  <th>Current Employer's Name</th>
-                  <td>{left.current_employer}</td>
-                  <td>{right.current_employer}</td>
-                </tr>
-                <tr>
-                  <th>Start Date</th>
-                  <td>{moment(left.current_employer_start_date).format(DATE_FORMAT)}</td>
-                  <td>{moment(right.current_employer_start_date).format(DATE_FORMAT)}</td>
-                </tr>
-                <tr>
-                  <th>Status</th>
-                  <td>{left.current_employer_status}</td>
-                  <td>{right.current_employer_status}</td>
-                </tr>
-                <tr>
-                  <th>Job Title</th>
-                  <td>{left.current_employer_job_title}</td>
-                  <td>{right.current_employer_job_title}</td>
-                </tr>
-                <tr>
-                  <th>Gross Annual Salary</th>
-                  <td>{left.current_employer_gross_annual_salary}</td>
-                  <td>{right.current_employer_gross_annual_salary}</td>
-                </tr>
-                <tr>
-                  <th>Commission</th>
-                  <td>{left.current_employer_commission}</td>
-                  <td>{right.current_employer_commission}</td>
-                </tr>
-                <tr>
-                  <th>Employer's Address</th>
-                  <td>{left.current_employer_address}</td>
-                  <td>{right.current_employer_address}</td>
-                </tr>
-                <tr>
-                  <th>Employer's Contact Details</th>
-                  <td>{left.current_employer_contact_details}</td>
-                  <td>{right.current_employer_contact_details}</td>
-                </tr>
-                <tr>
-                  <th>Rental Income</th>
-                  <td>{left.rental_income}</td>
-                  <td>{right.rental_income}</td>
-                </tr>
+                {new Array(Math.max(left.employment_history instanceof Array && left.employment_history.length, right.employment_history instanceof Array && right.employment_history.length)).fill().map((x, index) => [(
+                  <tr key={`${index}-employer_name`}>
+                    <th>Employer Name</th>
+                    <td>{left.employment_history && left.employment_history[index] && left.employment_history[index].employer_name}</td>
+                    <td>{right.employment_history && right.employment_history[index] && right.employment_history[index].employer_name}</td>
+                  </tr>
+                ), (
+                  <tr key={`${index}-start_date`}>
+                    <th>Start Date</th>
+                    <td>{left.employment_history && left.employment_history[index] && moment(left.previous_addresses[index].start_date).format(DATE_FORMAT)}</td>
+                    <td>{right.employment_history && right.employment_history[index] && moment(right.previous_addresses[index].start_date).format(DATE_FORMAT)}</td>
+                  </tr>
+                ), (
+                  <tr key={`${index}-end_date`}>
+                    <th>End Date</th>
+                    <td>{left.employment_history && left.employment_history[index] && moment(left.previous_addresses[index].end_date).format(DATE_FORMAT)}</td>
+                    <td>{right.employment_history && right.employment_history[index] && moment(right.previous_addresses[index].end_date).format(DATE_FORMAT)}</td>
+                  </tr>
+                ), (
+                  <tr key={`${index}-status`}>
+                    <th>Employment Status</th>
+                    <td>{left.employment_history && left.employment_history[index] && left.employment_history[index].status}</td>
+                    <td>{right.employment_history && right.employment_history[index] && right.employment_history[index].status}</td>
+                  </tr>
+                ), (
+                  <tr key={`${index}-job_title`}>
+                    <th>Occupation / Job Title</th>
+                    <td>{left.employment_history && left.employment_history[index] && left.employment_history[index].job_title}</td>
+                    <td>{right.employment_history && right.employment_history[index] && right.employment_history[index].job_title}</td>
+                  </tr>
+                ), (
+                  <tr key={`${index}-gross_annual_salary`}>
+                    <th>Gross Annual Salary</th>
+                    <td>{left.employment_history && left.employment_history[index] && left.employment_history[index].gross_annual_salary}</td>
+                    <td>{right.employment_history && right.employment_history[index] && right.employment_history[index].gross_annual_salary}</td>
+                  </tr>
+                ), (
+                  <tr key={`${index}-bonus`}>
+                    <th>Bonus</th>
+                    <td>{left.employment_history && left.employment_history[index] && left.employment_history[index].bonus}</td>
+                    <td>{right.employment_history && right.employment_history[index] && right.employment_history[index].bonus}</td>
+                  </tr>
+                ), (
+                  <tr key={`${index}-commission`}>
+                    <th>Commission</th>
+                    <td>{left.employment_history && left.employment_history[index] && left.employment_history[index].commission}</td>
+                    <td>{right.employment_history && right.employment_history[index] && right.employment_history[index].commission}</td>
+                  </tr>
+                ), (
+                  <tr key={`${index}-address`}>
+                    <th>Employer Address</th>
+                    <td>{left.employment_history && left.employment_history[index] && left.employment_history[index].address}</td>
+                    <td>{right.employment_history && right.employment_history[index] && right.employment_history[index].address}</td>
+                  </tr>
+                ), (
+                  <tr key={`${index}-contact_details`}>
+                    <th>Employer Contact Details</th>
+                    <td>{left.employment_history && left.employment_history[index] && left.employment_history[index].contact_details}</td>
+                    <td>{right.employment_history && right.employment_history[index] && right.employment_history[index].contact_details}</td>
+                  </tr>
+                )])}
                 <tr>
                   <th>Family Tax A/B</th>
                   <td>{left.family_tax}</td>
@@ -332,45 +350,60 @@ export default class Applicants extends Component {
                   )])}
                 </tbody>
               </table>
-              <div className="table-title">Income Details</div>
+              <div className="table-title">Employment History</div>
               <table className="table">
                 <tbody>
-                  <tr>
-                    <th>Current Employer's Name</th>
-                    <td>{applicant.current_employer}</td>
-                  </tr>
-                  <tr>
-                    <th>Start Date</th>
-                    <td>{moment(applicant.current_employer_start_date).format(DATE_FORMAT)}</td>
-                  </tr>
-                  <tr>
-                    <th>Status</th>
-                    <td>{applicant.current_employer_status}</td>
-                  </tr>
-                  <tr>
-                    <th>Job Title</th>
-                    <td>{applicant.current_employer_job_title}</td>
-                  </tr>
-                  <tr>
-                    <th>Gross Annual Salary</th>
-                    <td>{applicant.current_employer_gross_annual_salary}</td>
-                  </tr>
-                  <tr>
-                    <th>Commission</th>
-                    <td>{applicant.current_employer_commission}</td>
-                  </tr>
-                  <tr>
-                    <th>Employer's Address</th>
-                    <td>{applicant.current_employer_address}</td>
-                  </tr>
-                  <tr>
-                    <th>Employer's Contact Details</th>
-                    <td>{applicant.current_employer_contact_details}</td>
-                  </tr>
-                  <tr>
-                    <th>Rental Income</th>
-                    <td>{applicant.rental_income}</td>
-                  </tr>
+                  {applicant.employment_history instanceof Array && applicant.employment_history.map((employment, index) => [(
+                    <tr key={`${index}-employer_name`}>
+                      <th>Employer Name</th>
+                      <td>{employment.employment_history[index].employer_name}</td>
+                    </tr>
+                  ), (
+                    <tr key={`${index}-start_date`}>
+                      <th>Start Date</th>
+                      <td>{moment(employment.start_date).format(DATE_FORMAT)}</td>
+                    </tr>
+                  ), (
+                    <tr key={`${index}-end_date`}>
+                      <th>End Date</th>
+                      <td>{moment(employment.end_date).format(DATE_FORMAT)}</td>
+                    </tr>
+                  ), (
+                    <tr key={`${index}-status`}>
+                      <th>Employment Status</th>
+                      <td>{employment.status}</td>
+                    </tr>
+                  ), (
+                    <tr key={`${index}-job_title`}>
+                      <th>Occupation / Job Title</th>
+                      <td>{employment.job_title}</td>
+                    </tr>
+                  ), (
+                    <tr key={`${index}-gross_annual_salary`}>
+                      <th>Gross Annual Salary</th>
+                      <td>{employment.gross_annual_salary}</td>
+                    </tr>
+                  ), (
+                    <tr key={`${index}-bonus`}>
+                      <th>Bonus</th>
+                      <td>{employment.bonus}</td>
+                    </tr>
+                  ), (
+                    <tr key={`${index}-commission`}>
+                      <th>Commission</th>
+                      <td>{employment.commission}</td>
+                    </tr>
+                  ), (
+                    <tr key={`${index}-address`}>
+                      <th>Employer Address</th>
+                      <td>{employment.address}</td>
+                    </tr>
+                  ), (
+                    <tr key={`${index}-contact_details`}>
+                      <th>Employer Contact Details</th>
+                      <td>{employment.contact_details}</td>
+                    </tr>
+                  )])}
                   <tr>
                     <th>Family Tax A/B</th>
                     <td>{applicant.family_tax}</td>
