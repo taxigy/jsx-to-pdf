@@ -137,14 +137,14 @@ export default class Applicants extends Component {
                 {new Array(Math.max(left.previous_addresses instanceof Array && left.previous_addresses.length, right.previous_addresses instanceof Array && right.previous_addresses.length)).fill().map((x, index) => [(
                   <tr key={`${index}-address`}>
                     <th>Previous Address</th>
-                    <td>{left.previous_addresses && left.previous_addresses[index] && left.previous_addresses[index].address}</td>
-                    <td>{right.previous_addresses && right.previous_addresses[index] && right.previous_addresses[index].address}</td>
+                    <td>{left.previous_addresses instanceof Array && left.previous_addresses[index] && left.previous_addresses[index].address}</td>
+                    <td>{right.previous_addresses instanceof Array && right.previous_addresses[index] && right.previous_addresses[index].address}</td>
                   </tr>
                 ), (
                   <tr key={`${index}-date_moved`}>
                     <th>Date Moved into Previous Address</th>
-                    <td>{left.previous_addresses && left.previous_addresses[index] && moment(left.previous_addresses[index].date_moved_into_address).format(DATE_FORMAT)}</td>
-                    <td>{right.previous_addresses && right.previous_addresses[index] && moment(right.previous_addresses[index].date_moved_into_address).format(DATE_FORMAT)}</td>
+                    <td>{left.previous_addresses instanceof Array && left.previous_addresses[index] && moment(left.previous_addresses[index].date_moved_into_address).format(DATE_FORMAT)}</td>
+                    <td>{right.previous_addresses instanceof Array && right.previous_addresses[index] && moment(right.previous_addresses[index].date_moved_into_address).format(DATE_FORMAT)}</td>
                   </tr>
                 )])}
               </tbody>
@@ -356,7 +356,7 @@ export default class Applicants extends Component {
                   {applicant.employment_history instanceof Array && applicant.employment_history.map((employment, index) => [(
                     <tr key={`${index}-employer_name`}>
                       <th>Employer Name</th>
-                      <td>{employment.employment_history[index].employer_name}</td>
+                      <td>{employment.employer_name}</td>
                     </tr>
                   ), (
                     <tr key={`${index}-start_date`}>
