@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import Application from './components/Application/Application';
 import Applicants from './components/Applicants/Applicants';
 import Assets from './components/Assets/Assets';
@@ -10,8 +12,9 @@ export default class Html extends Component {
     const {
       item = {},
       applicants = [],
-      assets = [],
-      liabilities = []
+      property_details = [],
+      other_assets = [],
+      liabilities = [],
     } = this.props;
 
     return (
@@ -23,7 +26,9 @@ export default class Html extends Component {
           <div className="title">{item.name}</div>
           <Applicants applicants={applicants} />
           <Application application={item} />
-          <Assets assets={assets} />
+          <Assets
+            property_details={property_details}
+            other_assets={other_assets} />
           <Liabilities liabilities={liabilities} />
         </body>
       </html>
